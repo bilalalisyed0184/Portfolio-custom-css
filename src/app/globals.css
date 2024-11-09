@@ -1,0 +1,53 @@
+:root {
+  --background: #f9fafb;       /* Light gray background for a soft look */
+  --foreground: #1a1a1a;       /* Almost black for primary text */
+  --accent: #0066cc;           /* Blue accent for links and highlights */
+  --secondary: #666666;        /* Soft gray for secondary text */
+  --border-color: #e5e7eb;     /* Light border color for dividers */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;     /* Darker background for dark mode */
+    --foreground: #e5e5e5;     /* Light gray text for readability */
+    --accent: #4f83cc;         /* Softer blue accent for dark mode */
+    --secondary: #a1a1a1;      /* Light gray for secondary text */
+    --border-color: #333333;   /* Dark border for contrast in dark mode */
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-hover, #00509e);  /* Darker shade on hover */
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
